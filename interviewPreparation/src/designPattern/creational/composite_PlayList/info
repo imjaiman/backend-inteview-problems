@@ -1,0 +1,9 @@
+Composite pattern is used where we need to treat a group of objects in similar way as a single object.
+Composite pattern composes objects in term of a tree structure to represent part as well as whole hierarchy.
+This type of design pattern comes under structural pattern as this pattern creates a tree structure of group of objects.
+
+eg CEO is an employee, and CEO also contains the list of the people who directly report to CEO lets say managers.
+Noe manager is an employee, and manager contains the list of the people who directly report to mangager lets say developer.
+so its like a hierarchy type structures.
+
+this pattern used composite objects pattern means aggregation over inheritance

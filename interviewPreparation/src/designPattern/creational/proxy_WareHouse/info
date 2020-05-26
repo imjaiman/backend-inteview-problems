@@ -1,0 +1,3 @@
+In this desgin pattern , you are restricting or limit the use of actual services by putting placeholders to the
+given services.
+Lets say we have a service, and we want the there should be a proxy layer which keeps a limit of using this service.

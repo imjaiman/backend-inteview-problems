@@ -1,0 +1,8 @@
+Classes Name
+
+1. Spot   - Spot is the block of the 8*8 board matrix
+2. Piece  - Members in the chess, like King Queen and all. This is an abstract class.
+3. Board  - This is the board of the chess.
+4. Player - Represents the participant.
+5. Move -   Represents the game move.
+6. Game -   Controls the flow of the game.
