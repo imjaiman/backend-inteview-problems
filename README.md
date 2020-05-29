@@ -10,6 +10,8 @@ Java
 5. How to override toString method of Integer class.
 
 Company Wise Quesions for Backend Developer - https://tinyurl.com/y9sdnjqa
+Most Popular desing Quesions - https://tinyurl.com/ydzyfu7c
+Most Popular Java Backend Questions - https://tinyurl.com/y7cfe574
 
 
 Preparation
