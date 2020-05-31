@@ -180,19 +180,3 @@ Java - Everything Puzzle - 20 box having 20 apples 2 Ropes - how to find 15 min 
 5. Median of numbers as steram. 
 6. We have linkedlist like this 1->2->3->4->5 : Need to print like 1->5->2->4->3
 7. Local Maxima.
-
-
-
-
-Most Popular design Quesions - https://tinyurl.com/ydzyfu7c
-
-Most Popular Java Backend Questions - https://tinyurl.com/y7cfe574
-
-
-
-
-
-
-
-  
-
