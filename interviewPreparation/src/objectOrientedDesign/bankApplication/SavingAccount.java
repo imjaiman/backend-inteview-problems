@@ -1,7 +1,7 @@
 package objectOrientedDesign.bankApplication;
 
-import designProblems.bankApplication.Util.BankConstants;
-import designProblems.bankApplication.bankApplicaionEnum.BankAccountType;
+import objectOrientedDesign.bankApplication.Util.BankConstants;
+import objectOrientedDesign.bankApplication.bankApplicaionEnum.BankAccountType;
 
 /**
  * @author rahul.jaiman
@@ -9,11 +9,11 @@ import designProblems.bankApplication.bankApplicaionEnum.BankAccountType;
  */
 public class SavingAccount extends BankAccount {
 
-    public static final double MINIMUM_BALANCE = BankConstants.SAVING_ACCOUNT_MINIMUM_BALANCE;
+    public static final long MINIMUM_BALANCE = BankConstants.SAVING_ACCOUNT_MINIMUM_BALANCE;
 
     public static final double INTEREST_RATE = BankConstants.CURRENT_ACCOUNT_INTEREST_RATE;
 
-    public double getMinimumBalance() {
+    public long getMinimumBalance() {
         return MINIMUM_BALANCE;
     }
 

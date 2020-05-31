@@ -4,8 +4,8 @@
  */
 package objectOrientedDesign.lift;
 
-import designProblems.lift.exception.CantMoveDownException;
-import designProblems.lift.exception.CantMoveUpException;
+import objectOrientedDesign.lift.exception.CantMoveDownException;
+import objectOrientedDesign.lift.exception.CantMoveUpException;
 
 import java.util.LinkedList;
 
@@ -53,14 +53,11 @@ public class LiftImpl implements Lift {
 
     @Override
     public boolean isFull() {
-        return this.peopleInLift == LiftConstants.MAX_CAPACITY ? true : false;
+        return this.peopleInLift == LiftConstants.MAX_CAPACITY;
     }
 
     @Override
     public void start() throws CantMoveUpException {
-
-
-
 
 
     }
@@ -72,12 +69,12 @@ public class LiftImpl implements Lift {
 
     @Override
     public boolean movingUp() {
-        return this.direction == LiftDirection.UP ? true : false;
+        return this.direction == LiftDirection.UP;
     }
 
     @Override
     public boolean movingDown() {
-        return this.direction == LiftDirection.DOWN ? true : false;
+        return this.direction == LiftDirection.DOWN;
     }
 
 }

@@ -25,21 +25,21 @@ public class QuickSort {
 
     public static int partition(int[] arr, int l , int h) {
         int pivot = arr[h];
-        int i = l-1;
+        int pIndex = l-1;
         for(int j = l;j<h;j++){
             if(arr[j]<pivot){
 
-                i++;
-                int temp = arr[i];
-                arr[i] = arr[j];
+                pIndex++;
+                int temp = arr[pIndex];
+                arr[pIndex] = arr[j];
                 arr[j] = temp;
             }
         }
-        int temp = arr[i+1];
-        arr[i+1]= arr[h];
+        int temp = arr[pIndex+1];
+        arr[pIndex+1]= arr[h];
         arr[h] = temp;
 
-        return i+1;
+        return pIndex+1;
 
     }
 

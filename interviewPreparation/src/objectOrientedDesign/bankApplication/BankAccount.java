@@ -1,9 +1,10 @@
 package objectOrientedDesign.bankApplication;
 
-import designProblems.bankApplication.Util.BankConstants;
-import designProblems.bankApplication.bankApplicaionEnum.BankAccountType;
-import designProblems.bankApplication.bankApplicaionEnum.TransactionType;
-import designProblems.bankApplication.bankException.BankException;
+
+import objectOrientedDesign.bankApplication.Util.BankConstants;
+import objectOrientedDesign.bankApplication.bankApplicaionEnum.BankAccountType;
+import objectOrientedDesign.bankApplication.bankApplicaionEnum.TransactionType;
+import objectOrientedDesign.bankApplication.bankException.BankException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +18,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public abstract class BankAccount {
     private static AtomicInteger TRANSACTION_ID_GENERATOR = new AtomicInteger(0);
     private String accountNumber;
-    private double minimumBalance;
-    private double currentBalance;
+    private long minimumBalance;
+    private long currentBalance;
     private double interestRate;
     private List<Transaction> transactions;
 
@@ -30,19 +31,19 @@ public abstract class BankAccount {
         this.accountNumber = accountNumber;
     }
 
-    public double getMinimumBalance() {
+    public long getMinimumBalance() {
         return minimumBalance;
     }
 
-    public void setMinimumBalance(double minimumBalance) {
+    public void setMinimumBalance(long minimumBalance) {
         this.minimumBalance = minimumBalance;
     }
 
-    public double getCurrentBalance() {
+    public long getCurrentBalance() {
         return currentBalance;
     }
 
-    public void setCurrentBalance(double currentBalance) {
+    public void setCurrentBalance(long currentBalance) {
         this.currentBalance = currentBalance;
     }
 
@@ -65,7 +66,7 @@ public abstract class BankAccount {
         transactions.add(transaction);
     }
 
-    public void withdraw(double withdrawAmount) throws BankException {
+    public void withdraw(long withdrawAmount) throws BankException {
 
         // check for the current balance of saving account
         if (this.getType().equals(BankAccountType.SAVING.toString())) {
@@ -80,29 +81,36 @@ public abstract class BankAccount {
             }
         }
 
-        //update the current balance
-        currentBalance = currentBalance - withdrawAmount;
+        synchronized (this) {
+            //update the current balance
+            currentBalance = currentBalance - withdrawAmount;
 
-        //create a new transaction and update the add to the Bank Account
-        Transaction transaction = new Transaction();
-        transaction.setAmount(withdrawAmount);
-        String transactionId = BankConstants.WITHDRAW_OPERATION + TRANSACTION_ID_GENERATOR.incrementAndGet();
-        transaction.setTransactionId(transactionId);
-        transaction.setType(TransactionType.WITHDRAW);
-        addToTransactions(transaction);
+            //create a new transaction and update the add to the Bank Account
+            Transaction transaction = new Transaction();
+            transaction.setAmount(withdrawAmount);
+            String transactionId = BankConstants.WITHDRAW_OPERATION + TRANSACTION_ID_GENERATOR.incrementAndGet();
+            transaction.setTransactionId(transactionId);
+            transaction.setType(TransactionType.WITHDRAW);
+            addToTransactions(transaction);
+        }
+
     }
 
-    public void deposit(double depositAmount) throws BankException {
+    public void deposit(long depositAmount) throws BankException {
         if (depositAmount < 0) {
             throw new BankException("Deposit amount should be greater than 0, deposit amount: " + depositAmount);
         }
-        currentBalance = currentBalance + depositAmount;
-        Transaction transaction = new Transaction();
-        transaction.setAmount(depositAmount);
-        String transactionId = BankConstants.DEPOSIT_OPERATION + TRANSACTION_ID_GENERATOR.incrementAndGet();
-        transaction.setTransactionId(transactionId);
-        transaction.setType(TransactionType.DEPOSIT);
-        addToTransactions(transaction);
+
+        synchronized (this) {
+            currentBalance = currentBalance + depositAmount;
+            Transaction transaction = new Transaction();
+            transaction.setAmount(depositAmount);
+            String transactionId = BankConstants.DEPOSIT_OPERATION + TRANSACTION_ID_GENERATOR.incrementAndGet();
+            transaction.setTransactionId(transactionId);
+            transaction.setType(TransactionType.DEPOSIT);
+            addToTransactions(transaction);
+        }
+
     }
 
     public List<Transaction> getTransactionHistory() {

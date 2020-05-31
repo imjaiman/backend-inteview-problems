@@ -1,6 +1,6 @@
 package objectOrientedDesign.bankApplication;
 
-import designProblems.bankApplication.bankException.BankException;
+import objectOrientedDesign.bankApplication.bankException.BankException;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

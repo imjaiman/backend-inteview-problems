@@ -1,7 +1,10 @@
 package objectOrientedDesign.bankApplication;
 
-import designProblems.bankApplication.bankApplicaionEnum.BankAccountType;
-import designProblems.bankApplication.bankException.BankException;
+
+
+import objectOrientedDesign.bankApplication.bankApplicaionEnum.BankAccountType;
+import objectOrientedDesign.bankApplication.bankException.BankException;
+
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -24,10 +27,10 @@ public class DriverClass {
         Branch branch = headOffice.getBranchById("ZB1");
 
         //Created saving account with amount 100 and customer having Pancard = ABCDE0583F
-        branch.createBankAccount("ABCDE0583F", BankAccountType.SAVING.toString(), (double) 100);
+        branch.createBankAccount("ABCDE0583F", BankAccountType.SAVING.toString(),  100);
 
         //Created current account with amount 200 and customer having Pancard = ABCDE0583F
-        branch.createBankAccount("ABCDE0583F",BankAccountType.CURRENT_ACCOUNT.toString(), (double) 200);
+        branch.createBankAccount("ABCDE0583F",BankAccountType.CURRENT_ACCOUNT.toString(), 200);
 
         System.out.println("------- Saving Account Details and Current Account Details for Customer ABCDE0583F ----");
         Customer customer = branch.getCustomerByPanNumber("ABCDE0583F");

@@ -4,19 +4,11 @@
  */
 package java.oopsConcept.DemoJava8.defaultInterface;
 
-import demoJava.oopsConcept.innerClassDemo.InnerClassDemo;
-
 /**
  * @author rahul.jaiman
  * @version $Id: DefaultDemo.java, v 0.1 2020-05-14 15:46 rahul.jaiman Exp $$
  */
-public class DefaultDemoClass implements Interface1,Interface2 {
-
-    @Override
-    public void justAnotherMethod() {
-        System.out.println("just another method");
-    }
-
+public class DefaultDemoClass implements Interface1, Interface2 {
 
     public static void main(String[] args) {
         DefaultDemoClass d = new DefaultDemoClass();
@@ -27,7 +19,11 @@ public class DefaultDemoClass implements Interface1,Interface2 {
         one.justAnotherMethod();
 
 
+    }
 
+    @Override
+    public void justAnotherMethod() {
+        System.out.println("just another method");
     }
 
     @Override

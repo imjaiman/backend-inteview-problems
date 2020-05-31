@@ -4,8 +4,8 @@
  */
 package objectOrientedDesign.lift;
 
-import designProblems.lift.exception.CantMoveDownException;
-import designProblems.lift.exception.CantMoveUpException;
+import objectOrientedDesign.lift.exception.CantMoveDownException;
+import objectOrientedDesign.lift.exception.CantMoveUpException;
 
 /**
  * @author rahul.jaiman

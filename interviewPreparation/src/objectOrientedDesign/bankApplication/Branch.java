@@ -1,8 +1,8 @@
 package objectOrientedDesign.bankApplication;
 
-import designProblems.bankApplication.Util.BankConstants;
-import designProblems.bankApplication.bankApplicaionEnum.BankAccountType;
-import designProblems.bankApplication.bankException.BankException;
+import objectOrientedDesign.bankApplication.Util.BankConstants;
+import objectOrientedDesign.bankApplication.bankApplicaionEnum.BankAccountType;
+import objectOrientedDesign.bankApplication.bankException.BankException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Branch {
     }
 
     public void setBankAccounts(BankAccount bankAccount) {
-        if(bankAccounts == null){
+        if (bankAccounts == null) {
             bankAccounts = new ArrayList<>();
         }
         bankAccounts.add(bankAccount);
@@ -34,7 +34,7 @@ public class Branch {
     }
 
     public void setCustomers(Customer customer) {
-        if(customers == null){
+        if (customers == null) {
             customers = new ArrayList<>();
         }
         customers.add(customer);
@@ -48,7 +48,7 @@ public class Branch {
         this.branchId = branchId;
     }
 
-    public void createBankAccount(String panNumber, String bankAccountType, Double amount) {
+    public void createBankAccount(String panNumber, String bankAccountType, long amount) {
 
 
         BankAccount newBankAccount;
@@ -59,13 +59,13 @@ public class Branch {
             newBankAccount.setInterestRate(BankConstants.SAVING_ACCOUNT_INTEREST_RATE);
         }
         //creating current account
-        else{
+        else {
             newBankAccount = new CurrentAccount();
             newBankAccount.setMinimumBalance(BankConstants.CURRENT_ACCOUNT_MINIMUM_BALANCE);
             newBankAccount.setInterestRate(BankConstants.CURRENT_ACCOUNT_INTEREST_RATE);
         }
 
-        String newAccountNumber = BankConstants.ZETA_BANK_ACCOUNT_NUMBER_PREFIX+BRANCH_ID_GENERATOR.incrementAndGet();
+        String newAccountNumber = BankConstants.ZETA_BANK_ACCOUNT_NUMBER_PREFIX + BRANCH_ID_GENERATOR.incrementAndGet();
         newBankAccount.setAccountNumber(newAccountNumber);
         newBankAccount.setCurrentBalance(amount);
 
@@ -74,8 +74,7 @@ public class Branch {
 
         if (null != alreadyCustomer) {
             alreadyCustomer.setAccounts(newBankAccount);
-        }
-        else {
+        } else {
             Customer newCustomer = new Customer();
             newCustomer.setPanNumber(panNumber);
             newCustomer.setAccounts(newBankAccount);
@@ -90,22 +89,22 @@ public class Branch {
                 return customer;
             }
         }
-        throw  new BankException("No Customer is present with the given pan number: "+panNumber);
+        throw new BankException("No Customer is present with the given pan number: " + panNumber);
     }
 
     public BankAccount getAccountByAccountNumber(String accountNumber) throws BankException {
-        for(BankAccount bankAccount : bankAccounts){
-            if(bankAccount.getAccountNumber().equals(accountNumber)){
+        for (BankAccount bankAccount : bankAccounts) {
+            if (bankAccount.getAccountNumber().equals(accountNumber)) {
                 return bankAccount;
             }
         }
-        throw new BankException("No account is mapped with this account number: "+ accountNumber);
+        throw new BankException("No account is mapped with this account number: " + accountNumber);
 
     }
 
     //returns the customer with the given pancard
     private Customer customerPresentWithPanNumber(String panNumber) {
-        if(null != customers){
+        if (null != customers) {
             for (Customer customer : customers) {
                 if (customer.getPanNumber().equals(panNumber)) {
                     return customer;

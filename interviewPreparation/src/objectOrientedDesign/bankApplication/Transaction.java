@@ -1,6 +1,7 @@
 package objectOrientedDesign.bankApplication;
 
-import designProblems.bankApplication.bankApplicaionEnum.TransactionType;
+
+import objectOrientedDesign.bankApplication.bankApplicaionEnum.TransactionType;
 
 /**
  * @author rahul.jaiman
