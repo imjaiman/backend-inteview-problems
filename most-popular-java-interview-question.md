@@ -102,3 +102,13 @@ concurrentHashMap
 internal implementation of hashmap
 
 Third most income employee name from employee table.
+
+can we override static method in java
+
+can we overload static methods in java.
+
+why string is immutable in java.
+
+class loader
+
+
