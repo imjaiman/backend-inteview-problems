@@ -8,57 +8,97 @@ Method to print the items present in list, this method should be generic and sho
 Can we overload and override static method in java? 
 
 default and protected class modifiers in java.
+
 Relaese and acuire method implementation
+
 How to override toString method of Integer class.
+
 Dependecny Injection
+
 Inversion of control.
+
 Real example to use default & static methods of interface.
+
 Concurrent and Parallel 
+
 Java 8 features
+
 Stack and Heap memory
+
 How to access shared resource  with two threads
+
 How to annotation work in spring mvc
+
 Volatile 
+
 Concurrent hash map properties, can we read and write from the same segment in CHM?
+
 Lamda.
+
 opps concept with example
+
 solid 
+
 multithreading
+
 concurreny and parallelism 
+
 exception handling
+
 java 8 features 
+
 lamda 
+
 functional interfaces
+
 streams
+
 optional in java 8
+
 String 
+
 Stack and Heap memory 
+
 Garbage collections
+
 hashcode and equals
+
 LRU
+
 singleton class factory , desing pattern you know
+
 volatile
+
 Transient
+
 producer and consumer problem 
+
 all types of sort and their complexity
+
 sql all queris and joins
+
 jvm architecture
+
 string pool
+
 deadlock how to create how to prevent
+
 inner classes , static 
+
 Anonymous class , comparator comparable
+
 write own exception 
+
 spring framework works lifespan - how request flows
+
 dispacther servlet
+
 applicaton context
+
 spring annotations 
+
 concurrentHashMap
+
 internal implementation of hashmap
+
 Third most income employee name from employee table.
-
-
-
-
-
-
-
