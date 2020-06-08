@@ -111,4 +111,5 @@ why string is immutable in java.
 
 class loader
 
+hashcode and equals mehtod - https://java2blog.com/hashcode-and-equals-method-in-java/
 
