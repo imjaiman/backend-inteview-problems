@@ -113,9 +113,11 @@ class loader
 
 hashcode and equals mehtod - https://java2blog.com/hashcode-and-equals-method-in-java/
 
-Compilation and Execution of a Java Program\
+Compilation and Execution of a Java Program.
 
 JVM Architecture
+
+Delete, drop and truncate diff
 
 
 
