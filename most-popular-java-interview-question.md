@@ -113,6 +113,10 @@ class loader
 
 hashcode and equals mehtod - https://java2blog.com/hashcode-and-equals-method-in-java/
 
-static inner class and inner class?
+Compilation and Execution of a Java Program\
 
-SQL joins
+JVM Architecture
+
+
+
+
