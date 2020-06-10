@@ -115,3 +115,4 @@ hashcode and equals mehtod - https://java2blog.com/hashcode-and-equals-method-in
 
 static inner class and inner class?
 
+SQL joins
