@@ -4,6 +4,9 @@ I have created this so that you can find all backend interview preparation mater
 
 Design Pattern - https://sourcemaking.com/
 
+Grokking System Design Course
+https://coursehunters.online/search?context=topic&context_id=584&q=%5Beducative.io%5D%20%5BDesign%20Gurus%5D%20Grokking%20the%20System%20Design%20Interview&skip_context=true
+
 ## Company Wise Quesions for Backend Developer
 
 
