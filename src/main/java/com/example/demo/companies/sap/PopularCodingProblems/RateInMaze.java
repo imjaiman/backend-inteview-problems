@@ -4,12 +4,6 @@
  */
 package com.example.demo.companies.sap.PopularCodingProblems;
 
-import com.sun.tools.classfile.ConstantPool;
-
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.PriorityQueue;
-import java.util.Set;
 
 /**
  * @author rahul.jaiman
