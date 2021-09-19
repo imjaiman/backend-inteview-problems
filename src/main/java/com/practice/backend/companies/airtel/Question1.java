@@ -1,13 +1,5 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2020 All Rights Reserved.
- */
-package com.practice.backend.companies.airtel;
 
-/**
- * @author rahul.jaiman
- * @version $Id: Question1.java, v 0.1 2020-05-26 18:44 rahul.jaiman Exp $$
- */
+package com.practice.backend.companies.airtel;
 public class Question1 {
     public static void main(String[] args) {
         System.out.println(calculateNumber(new int[]{3,12}));
