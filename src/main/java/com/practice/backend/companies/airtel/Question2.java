@@ -1,13 +1,6 @@
-/**
- * Alipay.com Inc.
- * Copyright (c) 2004-2020 All Rights Reserved.
- */
+
 package com.practice.backend.companies.airtel;
 
-/**
- * @author rahul.jaiman
- * @version $Id: Question2.java, v 0.1 2020-05-26 19:08 rahul.jaiman Exp $$
- */
 public class Question2 {
     public static void main(String[] args) {
         System.out.println(calculateNumber(10));
